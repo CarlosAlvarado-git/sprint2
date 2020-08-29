@@ -12,10 +12,10 @@ public class Task{
     private SimpleDateFormat simpleDateFormat;
 
     /* Your code here */
-    public Task(String mensaje, Date fecha, int prio, String notas)
+    public Task(String mensaje, Date fecha_d, int prio, String notas)
     {
         this.msg_reminder = mensaje; 
-        this.do_date = fecha;
+        this.do_date = fecha_d;
         this.priority = prio;
         this.notes = notas;
     }
@@ -37,7 +37,7 @@ public class Task{
 
     public String getTaskDate(){
         this.simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
-        this.pattern = this.simpleDateFormat.newDate();
+        this.pattern = this.simpleDateFormat.format(this.do_date);
         return pattern;
         /* Your code here */
     }
