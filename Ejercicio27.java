@@ -217,7 +217,7 @@ public class Ejercicio27 {
                             System.out.print("*         "); 
                         }
                         else if(j == 3){
-                            System.out.print("*****     "); 
+                            System.out.print("* ***     "); 
                         }
                         else if(j == 4){
                             System.out.print("*   *     ");
