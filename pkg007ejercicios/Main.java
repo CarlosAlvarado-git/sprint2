@@ -108,7 +108,7 @@ public class Main {
                 nombreArchivo = teclado.next();
                 try
                 {
-                    archivo = new File ("C:\\"+ nombreArchivo+ ".txt");
+                    archivo = new File (nombreArchivo + ".txt");
                     fr = new FileReader (archivo);
                     br = new BufferedReader(fr);
                     String linea;
