@@ -62,16 +62,23 @@ public class Overloading {
                     }
                     else
                     {
-                        espacio = orden.indexOf(" ");
-                        if ("Abrir".equals(orden.substring(0, espacio)))
+                        if (Puertas.size() > 1)
                         {
-                            NumeroPuertaString = orden.substring(espacio+1, orden.trim().length());
-                            NumeroPuertaInt = Integer.parseInt(NumeroPuertaString);
-                            abrir(NumeroPuertaInt);
+                            espacio = orden.indexOf(" ");
+                            if ("Abrir".equals(orden.substring(0, espacio)))
+                            {
+                                NumeroPuertaString = orden.substring(espacio+1, orden.trim().length());
+                                NumeroPuertaInt = Integer.parseInt(NumeroPuertaString);
+                                abrir(NumeroPuertaInt);
+                            }
+                            else
+                            {
+                                System.out.println("Debe introducir la orden correctamente\n");
+                            }
                         }
                         else
                         {
-                            System.out.println("Debe introducir la orden correctamente\n");
+                            System.out.println("Para usar esa opción debe ingresar una puerta aparte de la principal");
                         }
                     }
                      
@@ -86,16 +93,23 @@ public class Overloading {
                     }
                     else
                     {
-                        espacio = orden.indexOf(" ");
-                        if ("Cerrar".equals(orden.substring(0, espacio)))
+                        if (Puertas.size() > 1)
                         {
-                            NumeroPuertaString = orden.substring(espacio+1, orden.trim().length());
-                            NumeroPuertaInt = Integer.parseInt(NumeroPuertaString);
-                            abrir(NumeroPuertaInt);
+                            espacio = orden.indexOf(" ");
+                            if ("Cerrar".equals(orden.substring(0, espacio)))
+                            {
+                                NumeroPuertaString = orden.substring(espacio+1, orden.trim().length());
+                                NumeroPuertaInt = Integer.parseInt(NumeroPuertaString);
+                                cerrar(NumeroPuertaInt);
+                            }
+                            else
+                            {
+                                System.out.println("Debe introducir la orden correctamente\n");
+                            }
                         }
                         else
                         {
-                            System.out.println("Debe introducir la orden correctamente\n");
+                            System.out.println("Para usar esa opción debe ingresar una puerta aparte de la principal");
                         }
                     }  
                      
