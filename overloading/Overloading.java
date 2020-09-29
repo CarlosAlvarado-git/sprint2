@@ -1,6 +1,6 @@
-package overloading;
 import java.util.Scanner;
 import java.util.LinkedList;
+
 public class Overloading {
     static LinkedList<Puerta> Puertas = new LinkedList<Puerta>();
     static Scanner teclado = new Scanner(System.in);
@@ -31,22 +31,22 @@ public class Overloading {
                          {
                              if (x == 0)
                              {
-                                 System.out.println("Puerta Principal está abierta");
+                                 System.out.println("Puerta Principal esta abierta");
                              }
                              else
                              {
-                                 System.out.println("Puerta No." + (x) + " está abierta");
+                                 System.out.println("Puerta No." + (x) + " esta abierta");
                              }    
                          }
                          else
                          {
                              if (x == 0)
                              {
-                                 System.out.println("Puerta Principal está cerrada");
+                                 System.out.println("Puerta Principal esta cerrada");
                              }
                              else
                              {
-                                 System.out.println("Puerta No." + (x) + " está cerrada");
+                                 System.out.println("Puerta No." + (x) + " esta cerrada");
                              }    
                          }
                      }
@@ -54,7 +54,7 @@ public class Overloading {
                     break;
                  case 3:
                      
-                    System.out.println("Si desea abrir la puerta principal, ingrese 'Abrir'.\nSi desea abrir una puerta en específico, ingrese 'Abrir' y el número de la puerta que desea abrir.");
+                    System.out.println("Si desea abrir la puerta principal, ingrese 'Abrir'.\nSi desea abrir una puerta en especifico, ingrese 'Abrir' y el numero de la puerta que desea abrir.");
                     orden = teclado.nextLine();
                     if ("Abrir".equals(orden))
                     {
@@ -62,30 +62,23 @@ public class Overloading {
                     }
                     else
                     {
-                        if (Puertas.size() > 1)
+                        espacio = orden.indexOf(" ");
+                        if ("Abrir".equals(orden.substring(0, espacio)))
                         {
-                            espacio = orden.indexOf(" ");
-                            if ("Abrir".equals(orden.substring(0, espacio)))
-                            {
-                                NumeroPuertaString = orden.substring(espacio+1, orden.trim().length());
-                                NumeroPuertaInt = Integer.parseInt(NumeroPuertaString);
-                                abrir(NumeroPuertaInt);
-                            }
-                            else
-                            {
-                                System.out.println("Debe introducir la orden correctamente\n");
-                            }
+                            NumeroPuertaString = orden.substring(espacio+1, orden.trim().length());
+                            NumeroPuertaInt = Integer.parseInt(NumeroPuertaString);
+                            abrir(NumeroPuertaInt);
                         }
                         else
                         {
-                            System.out.println("Para usar esa opción debe ingresar una puerta aparte de la principal");
+                            System.out.println("Debe introducir la orden correctamente\n");
                         }
                     }
                      
                      break;
                  case 4:
                     
-                    System.out.println("Si desea cerrar la puerta principal, ingrese 'Cerrar'.\nSi desea cerrar una puerte en específico, ingrese 'Cerrar' y el número de la puerta que desea cerrar");
+                    System.out.println("Si desea cerrar la puerta principal, ingrese 'Cerrar'.\nSi desea cerrar una puerte en especifico, ingrese 'Cerrar' y el numero de la puerta que desea cerrar");
                     orden = teclado.nextLine();
                     if ("Cerrar".equals(orden))
                     {
@@ -93,23 +86,16 @@ public class Overloading {
                     }
                     else
                     {
-                        if (Puertas.size() > 1)
+                        espacio = orden.indexOf(" ");
+                        if ("Cerrar".equals(orden.substring(0, espacio)))
                         {
-                            espacio = orden.indexOf(" ");
-                            if ("Cerrar".equals(orden.substring(0, espacio)))
-                            {
-                                NumeroPuertaString = orden.substring(espacio+1, orden.trim().length());
-                                NumeroPuertaInt = Integer.parseInt(NumeroPuertaString);
-                                cerrar(NumeroPuertaInt);
-                            }
-                            else
-                            {
-                                System.out.println("Debe introducir la orden correctamente\n");
-                            }
+                            NumeroPuertaString = orden.substring(espacio+1, orden.trim().length());
+                            NumeroPuertaInt = Integer.parseInt(NumeroPuertaString);
+                            cerrar(NumeroPuertaInt);
                         }
                         else
                         {
-                            System.out.println("Para usar esa opción debe ingresar una puerta aparte de la principal");
+                            System.out.println("Debe introducir la orden correctamente\n");
                         }
                     }  
                      
@@ -119,7 +105,7 @@ public class Overloading {
                      condicion = 1;
                      break;
                  default:
-                     System.out.println("Introduzca una opción valida \n");
+                     System.out.println("Introduzca una opcion valida \n");
                      break;
             }
        }

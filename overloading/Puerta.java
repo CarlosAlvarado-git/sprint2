@@ -1,5 +1,3 @@
-package overloading;
-
 public class Puerta {
     int NoPuerta;
     boolean Estado;
