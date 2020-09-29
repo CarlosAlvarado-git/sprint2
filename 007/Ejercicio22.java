@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-import javax.lang.model.util.ElementScanner14;
 public class Ejercicio22 {
     public static Scanner s = new Scanner(System.in);
 
