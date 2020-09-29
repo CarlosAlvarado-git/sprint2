@@ -1,4 +1,3 @@
-package pkg007ejercicios;
 import java.util.Random;
 import java.util.Scanner;
 import java.io.*;
@@ -104,7 +103,7 @@ public class Main {
             case 4:
                 int contadorLineas=0, promedio = 0;
                 String nombre="", nota1="",nota2="", nota3="", nombreArchivo="";
-                System.out.print("Ingrese el nombre del archivo del cual desea extraer los datos (El archivo debe encontrarse en el disco local C): ");
+                System.out.print("Ingrese el nombre del archivo del cual desea extraer los datos (El archivo debe encontrarse en la misma carpeta del programa): ");
                 nombreArchivo = teclado.next();
                 try
                 {
