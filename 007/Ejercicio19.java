@@ -10,12 +10,7 @@ public class Ejercicio19 {
         System.out.println("Ingrese un numero");
         numero = s.nextInt();
         s.close();
-        for(int i = 1; i<numero+1; i++)
-        {
-            resultado += i;
-            sumasucesiva += i;
-            sumasucesiva += (i+1 >= numero+1)? "=": "+";
-        }
-        System.out.println(sumasucesiva + resultado);
+        resultado = ((numero)*(numero+1))/2;
+        System.out.println("El resultado de la sumatoria es: " + resultado);
     }
 }
