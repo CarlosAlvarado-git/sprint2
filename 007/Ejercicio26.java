@@ -13,8 +13,16 @@ public class Ejercicio26 {
      System.out.println("Bienvenido al programa que calcula la division de dos números");   
      System.out.print("Ingrese el dividendo: ");   
      dividendo = s.nextInt();
-     System.out.print("Ingrese el divisor: ");  
-     divisor = s.nextInt();
+     while(divisor == 0)
+     {
+        System.out.print("Ingrese el divisor: ");  
+        divisor = s.nextInt();
+        if(divisor == 0)
+        {
+            System.out.print("Error, el divisor no puede ser 0\n");  
+        }
+     }
+
      s.close();
      residuo = dividendo; 
      while(residuo >= 0)
