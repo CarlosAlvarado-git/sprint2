@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Ejercicio22 {
     public static Scanner s = new Scanner(System.in);
 
@@ -16,12 +17,17 @@ public class Ejercicio22 {
         {
             System.out.println("El numero "+ numero1 + " es mayor que " + numero2);
         }
+        else if(numero1 < numero2)
+        {
+            System.out.println("El numero "+ numero1 + " es menor que " + numero2);
+        }
         else if(numero1 == numero2)
         {
             System.out.println("El numero "+ numero1 + " es igual que " + numero2);
         }
-        else{
-            System.out.println("El numero "+ numero1 + " es menor que " + numero2);
+        else
+        {
+            System.out.println("El dato ingresado no es un numero");
         }
     }
     
